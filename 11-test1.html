@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Shopbluesky.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,5
+00;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+.displaybar {
+   height: 25px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+
+
+    overflow: hidden; /* Hide overflow to keep scrolling contained */
+}
+
+.displaybar-text {
+    top: -2px; 
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: scroll-left 40s linear infinite; /* Animation applied here */
+}
+
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+/* Ensure there's no extra space at the ends */
+.displaybar-text > * {
+    margin-right: 100px; /* Space between phrases */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+body {
+    margin: 0px;
+   height: 2000px;
+   
+}
+
+.main-img{
+    position: relative;
+   max-width: 100%;
+}
+
+.header{
+    height: 90px;
+   
+    width:100%;
+    position: absolute;
+    top:25px;
+    display: flex;
+   
+    
+}
+
+
+
+
+.left-header{
+    display: flex;
+    width:450px;
+    flex-direction: row;
+    margin-left: 0px;
+   
+    justify-content: center;
+    align-items: center;
+    margin-left:35px;
+    flex-shrink: 0;
+}
+
+.left-header p{
+    color: #FFFFFF;
+    font-family: "Roboto" ;
+    font-size: 12px;
+    margin-right: 25px;
+    font-weight: bolder;
+    flex-shrink: 0;
+   
+  
+    
+}
+
+
+
+.middle-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+   width: 350px;
+    margin-right: 30px;
+    margin-left: 15px;
+    
+}
+.logo{
+    height: 210px;
+    align-items: center;
+}
+.right-header {
+    flex-direction: row;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 32px;
+    margin-right: 15px;
+   
+}
+.right-header p{
+   
+    color: #FFFFFF;
+    font-family: "Roboto" ;
+    font-size: 12px;
+  
+    margin-left: 25px;
+    font-weight: bolder;
+    flex-shrink: 0;
+}
+.bag{
+    height: 24px;
+}
+.account{
+    height: 30px;
+}
+.search{
+   height: 24px;
+}
+
+#country{
+ width: 20px;
+ border-radius: 10px;
+
+}
+
+.Products{
+ position: relative;
+grid-template-columns: 190px 190px  190px 180px 190px 190px ;
+   display: grid;
+   grid-gap: 30px;
+   margin-left: 45px;
+   margin-right: 40px;
+   margin-top: 30px;
+  
+}
+
+.product-wrapper {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+.Products:hover .button {
+            opacity: 1;
+        }
+        .product1 { opacity: 0.9; }
+        .product2 { opacity: 0.9; }
+        .product3 { opacity: 0.9; }
+        .product4 { opacity: 0.9; }
+        .product5 { opacity: 0.9; }
+        .product6 { opacity: 0.9; }
+        .button {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: grey;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+
+        .button-left {
+    left: 10px;
+    bottom: 10px;
+    background-color: #FFFFFF;
+    color: #545353;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+    
+
+    }
+
+        .button-right {
+            right: 10px;
+            bottom: 10px;
+            background-color: #FFFFFF;
+            color: #545353;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adjust values as needed */
+        }
+
+        .arrow {
+            position: relative;
+            font-family: "roboto";
+            line-height: 1;
+        }
+
+        .arrow-left::before {
+            content: '<';
+        }
+        .arrow-left:hover {
+            content: '<';
+        }
+
+
+        .arrow-right::before {
+            content: '>';
+        }
+
+        
+
+
+
+
+
+.product1{
+  margin-right: 30px;
+    display: flex;
+   max-width: 100%;
+    height: 188px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    position: relative;
+    
+} .poplittle{
+    position: absolute;
+   top: -50px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    font-size: 11px;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    font-family: "roboto";
+    font-weight: bolder;
+    left: 15px;
+}
+
+
+.product2{
+ margin-right: px;
+    display: flex;
+position: relative;
+    max-width: 100%;
+    height: 188px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.product3{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    margin-right: 30px;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    height: 188px;
+}
+.product4{
+    margin-right: 30px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  margin-top: 45px;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    height: 188px;
+}
+.product5{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    margin-right: 30px;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    height: 188px;
+}
+.product6{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+    margin-right: 30px;
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    height: 188px;
+
+}
+
+.Textralated{
+
+}
+.title,
+.pricetag,
+.color{
+    font-family: "roboto";
+    color: #545353;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+   margin-top:5px ;
+   
+    
+}
+.color{
+    font-weight: 500;
+}
+.pricetag{
+    color: #545353B3;
+}
+
+.next{
+    margin-top: 70px;
+    max-width: 100%;
+}
+
+.product-wrapper {
+    display: flex;
+   
+    width: 100%; /* or set to the desired width */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.hover-text {
+    position: relative;
+ color: #FFFFFF;
+    font-family: "Roboto" ;
+    font-size: 12px;
+    margin-right: 25px;
+    font-weight: bolder;
+    flex-shrink: 0;
+    transition: height 0.5s ease, opacity 0.5s ease; /* Transition for height and opacity */
+ cursor: pointer;
+   display: flex;
+   flex-direction: column;
+
+    }
+
+    .content-holder{
+        background-color:rgb(19, 18, 18); 
+    border: none;
+    height: 480px;
+    width: 170px;
+    display:none;
+    font-weight: 200;
+    text-align: left;
+    position: absolute; 
+    top: 52px; 
+    left: -30px;
+    z-index: 10; 
+  
+
+    }
+.hover-content {
+    opacity: 1; 
+    margin-top: 20px;
+   
+}
+
+.content-holder p{
+    margin-left:30px;
+    text-wrap: nowrap;
+    margin-top: 17px;
+position: relative;
+display:inline-block;
+padding: 0px;
+margin-bottom: 17px;
+margin-top: 0px;
+
+    
+}
+.hover-text:hover .content-holder {
+    display: block; 
+    cursor: pointer;
+    
+}
+
+
+.hover-text2 {
+    cursor: pointer;
+    position: relative;
+ color: #FFFFFF;
+    font-family: "Roboto" ;
+    font-size: 12px;
+    margin-right: 25px;
+    font-weight: bolder;
+    flex-shrink: 0;
+  
+ 
+   display: flex;
+   flex-direction: column;
+
+    }
+
+    .content-holder2{
+       
+        cursor: pointer;
+        background-color:rgb(19, 18, 18); 
+    border: none;
+    height:auto;
+    width: auto;
+    display:none;
+    font-weight: 200;
+    text-align: left;
+    position: absolute; 
+    top: 52px; 
+    left: -30px;
+    z-index: 10; 
+   
+
+    }
+.hover-content2 {
+    opacity: 1; 
+margin-top: 10px;
+
+   
+}
+
+.content-holder2 p{
+    margin-left:30px;
+    text-wrap: nowrap;
+    font-family: "roboto";
+    position: relative;
+    display: inline-block;
+    margin-bottom:10px;
+    
+}
+.hover-text2:hover .content-holder2 {
+    display: block; 
+    cursor: pointer;
+    
+    
+}
+/* Create the line effect */
+.content-holder p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: rgb(255, 255, 255); /* Adjust the color of the line */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to scale the line */
+.content-holder p:hover::after {
+  transform: scaleX(1);
+}
+
+/* Create the line effect */
+.content-holder2 p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+ 
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: rgb(255, 255, 255); /* Adjust the color of the line */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to scale the line */
+.content-holder2 p:hover::after {
+  transform: scaleX(1);
+}
+
+.titless{
+  font-size: 32px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  color: white;
+  top:430px;
+  left: 620px;
+  cursor: pointer;
+ 
+}
+.titles2{
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  top: 500px;
+  left: 635px;
+  position: absolute;
+  cursor: pointer;
+  font-family: "roboto";
+}
+
+
+
+
+
+
+
+/* Create the line effect */
+.titles2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: rgb(255, 255, 255); /* Adjust the color of the line */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.7s ease;
+}
+
+/* Hover effect to scale the line */
+.titles2:hover::after {
+  transform: scaleX(1);
+}
+
+/* Create the line effect */
+.titles2 ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+ 
+  height: 1px; /* Adjust the thickness of the line */
+  background-color: rgb(255, 255, 255); /* Adjust the color of the line */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to scale the line */
+.content-holder2 p:hover::after {
+  transform: scaleX(1);
+}
+
+.aaa{
+  text-decoration: none;
+}
+</style>
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+
+<div class="displaybar">
+<div class="displaybar-text">
+  <!-- Original content -->
+  <p class="p1">FREE UK SHIPPING ON ORDERS OVER £100</p>
+  <p class="p2">EXPRESS INTERNATIONAL SHIPPING</p>
+  <p class="p3">FREE UK SHIPPING ON ORDERS OVER £100</p>
+  <p class="p4">EXPRESS INTERNATIONAL SHIPPING</p>
+  <p class="p4">FREE UK SHIPPING ON ORDERS OVER £100</p>
+  <!-- Duplicated content for seamless scrolling -->
+  <p class="p1">FREE UK SHIPPING ON ORDERS OVER £100</p>
+  <p class="p2">EXPRESS INTERNATIONAL SHIPPING</p>
+  <p class="p3">FREE UK SHIPPING ON ORDERS OVER £100</p>
+  <p class="p4">EXPRESS INTERNATIONAL SHIPPING</p>
+  <p class="p4">FREE UK SHIPPING ON ORDERS OVER £100</p>
+
+</div>
+</div>
+
+<div>
+  
+    <img class="main-img"
+     src="new-pics/HotWheelsDesktopBanner (1).webp">
+<p class="titless">Studios ®</p>
+<p class="titles2">→ SHOP HERE</p>
+     <div class="header">
+
+
+        
+            <div class="left-header">
+                <p>NEW</p>
+           
+                    <div class="hover-text" >COLLECTION 
+                        <div class="content-holder">
+                        <div class="hover-content">
+    <p>Studios ®</p>
+    <p>Y2K</p>
+    <p>Youtooz</p>
+    <p>Vintage Graphics</p>
+    <p>SDMN x Hot Wheels</p>
+    <p>SDMN™</p>
+    <p>SDMN FC</p>
+    <p>Blueprint</p>
+    <p>Imperial Varsity</p>
+    <p>Graffiti</p>
+    <p>Activewear</p>
+    <p>SDMN x SpongeBob</p>
+    <p>Varsity</p>
+    <p>Nitro</p>
+    <p>Colour Block</p>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+               
+
+                <div class="hover-text2" > CLOTHING
+                    <div class="content-holder2">
+                    <div class="hover-content2">
+<p>All</p>
+<p>Hoodies/Sweatshirts</p>
+<p>T-Shirts</p>
+<p>Jackets </p>
+<p>Shorts
+    </p>
+<p>Joggers/Bottoms</p>
+<p> Accessories</p>
+
+                    </div>
+                </div>
+                </div>
+                
+                <p>ACCESSORIES</p>
+                <p>GIFT CARDS</p>
+            </div>
+
+            <div class="middle-header">
+<img class="logo" src="new-pics/Playful_Typographic_Design_Studio_Brand_Logo__1_-removebg-preview.png">
+            </div>
+
+            <div class="right-header">
+                <p>ABOUT</p>
+                <p>SUPPORT</p>
+                <p><select id="country" onchange="updateCurrency()">
+                    <option value="us" data-currency="USD $">United States</option>
+                    <option value="uk" data-currency="GBP £">United Kingdom</option>
+                    <option value="ca" data-currency="CAD $">Canada</option>
+                    html
+                    Copy code
+                    <option value="jp" data-currency="JPY ¥">Japan (¥)</option>
+                    <option value="de" data-currency="EUR€ ">Germany (€)</option>
+                    <option value="fr" data-currency="EUR">France (€)</option>
+                    <option value="au" data-currency="AUD">Australia ($)</option>
+                    <option value="in" data-currency="INR">India (₹)</option>
+                    <option value="cn" data-currency="CNY">China (¥)</option>
+                    <option value="br" data-currency="BRL">Brazil (R$)</option>
+                    <option value="za" data-currency="ZAR">South Africa (R)</option>
+                    <option value="mx" data-currency="MXN">Mexico ($)</option>
+                    <option value="ru" data-currency="RUB">Russia (₽)</option>
+                    <option value="it" data-currency="EUR">Italy (€)</option>
+                    <option value="es" data-currency="EUR">Spain (€)</option>
+                    <option value="kr" data-currency="KRW">South Korea (₩)</option>
+                    <option value="sa" data-currency="SAR">Saudi Arabia (ر.س)</option>
+                    <option value="ae" data-currency="AED">United Arab Emirates (د.إ)</option>
+                    <option value="sg" data-currency="SGD">Singapore (S$)</option>
+                    <option value="nl" data-currency="EUR">Netherlands (€)</option>
+                    <option value="se" data-currency="SEK">Sweden (kr)</option>
+                    <option value="no" data-currency="NOK">Norway (kr)</option>
+                    <option value="ch" data-currency="CHF">Switzerland (CHF)</option>
+                    <option value="pl" data-currency="PLN">Poland (zł)</option>
+                    <option value="tr" data-currency="TRY">Turkey (₺)</option>
+                    <option value="id" data-currency="IDR">Indonesia (Rp)</option>
+                    <option value="my" data-currency="MYR">Malaysia (RM)</option>
+                    <option value="ph" data-currency="PHP">Philippines (₱)</option>
+                    <option value="hk" data-currency="HKD">Hong Kong (HK$)</option>
+                    
+                    <option value="cz" data-currency="CZK">Czech Republic (Kč)</option>
+                    <option value="ro" data-currency="RON">Romania (lei)</option>
+                    <option value="hu" data-currency="HUF">Hungary (Ft)</option>
+                    <option value="bg" data-currency="BGN">Bulgaria (лв)</option>
+                    <option value="dk" data-currency="DKK">Denmark (kr)</option>
+                    <option value="at" data-currency="EUR">Austria (€)</option>
+                    <option value="ie" data-currency="EUR">Ireland (€)</option>
+                    <option value="lt" data-currency="EUR">Lithuania (€)</option>
+                    <option value="lv" data-currency="EUR">Latvia (€)</option>
+                    <option value="ee" data-currency="EUR">Estonia (€)</option>
+                    <option value="sk" data-currency="EUR">Slovakia (€)</option>
+                    <option value="si" data-currency="EUR">Slovenia (€)</option>
+                    <option value="hr" data-currency="HRK">Croatia (kn)</option>
+                    <option value="ba" data-currency="BAM">Bosnia and Herzegovina (KM)</option>
+                    <option value="me" data-currency="EUR">Montenegro (€)</option>
+                    <option value="mk" data-currency="MKD">North Macedonia (ден)</option>
+                    <option value="al" data-currency="ALL">Albania (Lek)</option>
+                    <option value="rs" data-currency="RSD">Serbia (дин.)</option>
+                    <option value="ua" data-currency="UAH">Ukraine (₴)</option>
+                    <option value="by" data-currency="BYN">Belarus (Br)</option>
+                    <option value="ge" data-currency="GEL">Georgia (ლ)</option>
+                    <option value="am" data-currency="AMD">Armenia (դ.)</option>
+                    <option value="az" data-currency="AZN">Azerbaijan (₼)</option>
+                    <option value="kz" data-currency="KZT">Kazakhstan (₸)</option>
+                    <option value="uz" data-currency="UZS">Uzbekistan (soʻm)</option>
+                    <option value="kg" data-currency="KGS">Kyrgyzstan (с)</option>
+                    <option value="tm" data-currency="TMT">Turkmenistan (T)</option>
+                    <option value="np" data-currency="NPR">Nepal (Rs)</option>
+                    <option value="bt" data-currency="INR">Bhutan (₹)</option>
+                    <option value="lk" data-currency="LKR">Sri Lanka (Rs)</option>
+                    <option value="mv" data-currency="MVR">Maldives (MVR)</option>
+                </select>
+                <span id="currency">USD</span></p>
+                <p><img class="search" src="icons/icons8-search-30 (1).png"></p>
+                <p><img class="account" src="icons/person.png"></p>
+                <p><img class="bag" src="icons/icons8-shopping-bag-48.png"></p>
+
+            </div>
+     </div>
+</div>
+
+<div class="Products">
+    <div class="product-wrapper">
+        <div class="product1">
+            <div class="img-div">
+                <img src="new-pics/product11">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product3">
+            <div class="img-div">
+                <img src="new-pics/product3">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product4">
+            <div class="img-div">
+                <img src="new-pics/product4">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product5">
+            <div class="img-div">
+                <img src="new-pics/productrep">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product6">
+            <div class="img-div">
+                <img src="new-pics/product6">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="button button-left" id="prev-button">
+        <span class="arrow arrow-left"></span>
+    </div>
+    <div class="button button-right" id="next-button">
+        <span class="arrow arrow-right"></span>
+    </div>
+</div>
+<div >
+    <img class="next" src="new-pics/lol">
+</div>
+
+
+<div class="Products">
+    <div class="product-wrapper">
+        <div class="product1">
+            <div class="img-div">
+                <img src="new-pics/product11">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product3">
+            <div class="img-div">
+                <img src="new-pics/product3">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product4">
+            <div class="img-div">
+                <img src="new-pics/product4">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product5">
+            <div class="img-div">
+                <img src="new-pics/productrep">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product6">
+            <div class="img-div">
+                <img src="new-pics/product6">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="button button-left" id="prev-button">
+        <span class="arrow arrow-left"></span>
+    </div>
+    <div class="button button-right" id="next-button">
+        <span class="arrow arrow-right"></span>
+    </div>
+</div>
+
+
+
+<div>
+    <img class="next" src="new-pics/sidel">
+</div>
+
+
+<div class="Products">
+    <div class="product-wrapper">
+        <div class="product1">
+            <div class="img-div">
+                <img src="new-pics/product11">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product3">
+            <div class="img-div">
+                <img src="new-pics/product3">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product4">
+            <div class="img-div">
+                <img src="new-pics/product4">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product5">
+            <div class="img-div">
+                <img src="new-pics/productrep">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product6">
+            <div class="img-div">
+                <img src="new-pics/product6">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+        <div class="product2">
+            <div class="img-div">
+                <img src="new-pics/product2">
+            </div>
+            <div class="Textralated">
+                <p class="title">INITIAL BOX ZIP HOODIE</p>
+                <p class="color">Black</p>
+                <p class="pricetag">£60.00</p>
+                <p class="poplittle">Now Exclusive</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="button button-left" id="prev-button">
+        <span class="arrow arrow-left"></span>
+    </div>
+    <div class="button button-right" id="next-button">
+        <span class="arrow arrow-right"></span>
+    </div>
+</div>
+<div >
+    <img class="next" src="new-pics/sidel2">
+</div>
+
+
+
+<script>function updateCurrency() {
+    const countrySelect = document.getElementById('country');
+    const selectedOption = countrySelect.options[countrySelect.selectedIndex];
+    const currency = selectedOption.getAttribute('data-currency');
+    document.getElementById('currency').textContent = currency;
+}
+
+
+
+
+const productWrapper = document.querySelector('.product-wrapper');
+const prevButton = document.getElementById('prev-button');
+const nextButton = document.getElementById('next-button');
+
+let currentIndex = 0;
+const products = document.querySelectorAll('.product1, .product2, .product3, .product4, .product5, .product6'); // Adjust according to actual products
+const productWidth = products[0].offsetWidth; // Width of a product
+const margin = 30; // Margin between products
+const totalWidth = productWidth + margin;
+
+function updatePosition() {
+    const offset = -currentIndex * totalWidth;
+    productWrapper.style.transform = `translateX(${offset}px)`;
+}
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updatePosition();
+    }
+});
+
+nextButton.addEventListener('click', () => {
+    if (currentIndex < products.length - 1) {
+        currentIndex++;
+        updatePosition();
+    }
+});
+
+updatePosition(); // Initialize position
+    
+    
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.querySelector('.hover-text');
+    const header = document.querySelector('.header');
+
+    trigger.addEventListener('mouseover', () => {
+        header.style.backgroundColor = 'black'; // Color of the header when hovering over the trigger
+    });
+
+    trigger.addEventListener('mouseout', () => {
+        header.style.backgroundColor = ''; // Original color of the header
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.querySelector('.hover-text2');
+    const header = document.querySelector('.header');
+
+    trigger.addEventListener('mouseover', () => {
+        header.style.backgroundColor = 'black'; // Color of the header when hovering over the trigger
+    });
+
+    trigger.addEventListener('mouseout', () => {
+        header.style.backgroundColor = ''; // Original color of the header
+    });
+});
+
+
+
+const hoverText = document.querySelector('.hover-text');
+    const contentHolder = document.querySelector('.content-holder');
+
+    hoverText.addEventListener('mouseenter', () => {
+        contentHolder.style.display = 'block';
+    });
+
+    hoverText.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!contentHolder.matches(':hover')) {
+                contentHolder.style.display = 'none';
+            }
+        }, 100); // Adjust timeout if needed
+    });
+
+
+
+
+    const hoverText2 = document.querySelector('.hover-text2');
+    const contentHolder2 = document.querySelector('.content-holder2');
+
+    hoverText2.addEventListener('mouseenter', () => {
+        contentHolder2.style.display = 'block';
+    });
+
+    hoverText2.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!contentHolder2.matches(':hover')) {
+                contentHolder2.style.display = 'none';
+            }
+        }, 100); // Adjust timeout if needed
+    });
+
+
+
+    contentHolder.addEventListener('mouseenter', () => {
+        contentHolder.style.display = 'block';
+    });
+
+    contentHolder.addEventListener('mouseleave', () => {
+        contentHolder.style.display = 'none';
+    });
+
+
+
+    contentHolder2.addEventListener('mouseenter', () => {
+        contentHolder2.style.display = 'block';
+    });
+
+    contentHolder2.addEventListener('mouseleave', () => {
+        contentHolder2.style.display = 'none';
+    });
+
+</script>
+
+
+
+</body>
+
+</html>
